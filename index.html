@@ -3,26 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joseph Tamras</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <!-- Add Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- Header Section -->
     <header>
-      <h1>Welcome to my site!</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <section>
-      <h2>About Me</h2>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+      <h1>Hi, I'm Joe</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magnam
-        beatae repudiandae suscipit eaque sapiente, ad in facilis iure quam
-        aperiam tenetur placeat cupiditate, ea voluptatem tempora consequatur
-        consequuntur quasi.
+        I code.
       </p>
     </section>
-    <section>
-      <h2>My Projects</h2>
-      <ul>
-        <li><a href="https://www.example.com">Example.com</a></li>
-      </ul>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Software Engineer. Assyrian. Eh, I'll fill this out later :)
+      </p>
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Side Project</h3>
+        <p>Ummm in the works</p>
+      </div>
+      <!-- Add more projects here -->
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">Fixing Problems</div>
+        <div class="skill">Pro Googler/AI prompter</div>
+        <div class="skill">Kotlin (server-side)</div>
+        <div class="skill">GraphQL</div>
+        <div class="skill">Programming Language Agility</div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate, feel free to reach out!</p>
+      <br>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/joseph-tamras" class="contact-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/JosephTamras" class="contact-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </section>     
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Joseph Tamras. All rights reserved.</p>
+      <p>Yea, I made this with AI cuz portfolio sites are boring.</p>
+    </footer>
   </body>
 </html>
