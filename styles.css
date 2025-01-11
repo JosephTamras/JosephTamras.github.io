@@ -1,0 +1,317 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme Variables */
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --primary-color: #2a245c; /* Green */
+    --secondary-color: #f4f4f4;
+    --card-background: #fff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --background-color: #1e1e1e;
+    --text-color: #f9f9f9;
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #2e2e2e;
+    --card-background: #2e2e2e;
+    --card-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+/* Header Styling (Quick Links) */
+header {
+    background: var(--text-color);
+    color: var(--background-color);
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: var(--background-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: scale(1.1); /* Slightly enlarge the link */
+}
+
+/* Projects Section */
+#projects {
+    background: var(--secondary-color);
+    padding: 3rem 2rem;
+    text-align: center; /* Ensures the Projects header is centered */
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Ensures the Projects header stays centered */
+    top: 0;
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* On click, we'll apply a quick scale effect */
+header nav a:active {
+    transform: scale(0.95); /* Shrink slightly on click */
+}
+
+/* Smooth transition for link background */
+header nav a {
+    transition: background-color 0.3s, transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Section Header Styling */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Section Headers */
+section h2:hover {
+    color: var(--primary-color); /* Change the text color on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0); /* Start with no visible underline */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+/* Underline animation on hover */
+section h2:hover::after {
+    transform: scaleX(1); /* Underline appears from left to right */
+    transform-origin: bottom left;
+}
+
+/* Intro Section */
+#intro {
+    background: var(--primary-color);
+    color: var(--background-color);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+#intro h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+#intro p {
+    font-size: 1.5rem;
+}
+
+/* About Section */
+#about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--card-background);
+}
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Projects Section */
+#projects {
+    background: var(--secondary-color);
+    padding: 3rem 2rem;
+}
+#projects h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.project {
+    background: var(--card-background);
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+}
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+#contact {
+    background: var(--secondary-color);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#contact ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+#contact li {
+    margin-bottom: 0.5rem;
+}
+#contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: var(--text-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Skills Section */
+#skills {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: var(--card-background);
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Grid Layout for Skills */
+#skills .skills-grid {
+    display: grid;  /* Use grid layout instead of flex */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Creates responsive columns */
+    gap: 20px;  /* Adds space between grid items */
+    justify-items: center; /* Centers items horizontally in each column */
+    align-items: center;   /* Centers items vertically in each row */
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+
+/* Individual Skill Styling */
+#skills .skill {
+    background: var(--primary-color); /* Background color for cards */
+    color: var(--background-color); /* Text color */
+    padding: 1rem; /* Adjusted padding for better compactness */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid var(--primary-color); /* Border color matching the background */
+    font-size: 1rem;
+    font-weight: 600; /* Bold text */
+    text-align: center;
+    max-width: 200px; /* Fixed width for consistency */
+    box-shadow: 0 4px 6px var(--card-shadow); /* Slight shadow for depth */
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Skills */
+#skills .skill:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.contact-links {
+    display: flex;
+    gap: 20px;  /* Space between the icons */
+    justify-content: center;  /* Center the links horizontally */
+  }
+  
+  .contact-link {
+    font-size: 24px;  /* Increase the font size to make the text and icon bigger */
+    text-decoration: none;  /* Remove the underline */
+    color: #333;
+    display: flex;
+    align-items: center;  /* Align the icon and text vertically */
+  }
+  
+  .contact-link i {
+    margin-right: 8px;  /* Space between icon and text */
+    font-size: 32px;  /* Increase the icon size */
+  }
+  
+  /* Remove underline on hover */
+  .contact-link:hover {
+    text-decoration: none;  /* Ensure there's no underline on hover */
+  }
+  
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    #skills .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns on mobile */
+        gap: 1rem; /* Reduced gap */
+    }
+
+    #skills .skill {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #skills .skills-grid {
+        gap: 0.5rem; /* Even smaller gap on very small screens */
+    }
+
+    #skills .skill {
+        padding: 0.5rem; /* Smaller padding */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+}
